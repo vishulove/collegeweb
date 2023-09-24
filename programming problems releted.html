@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programmers Group Discussion</title>
+    <style>
+        /* Reset some default styles for better consistency */
+        body, h1, ul, li {
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        header {
+            background-color: #1c0468;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2rem;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(178, 17, 200, 0.1);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .discussion-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .discussion-item {
+            flex: 1;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid #ddd;
+            background-color: #fff;
+            box-shadow: 0 0 5px rgba(230, 54, 177, 0.1);
+        }
+
+        @media screen and (max-width: 768px) {
+            .discussion-item {
+                flex-basis: calc(50% - 20px);
+            }
+        }
+
+        @media screen and (max-width: 576px) {
+            .discussion-item {
+                flex-basis: calc(100% - 20px);
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #1c0468;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Programmers Group Discussion</h1>
+    </header>
+    <div class="container">
+        <ul class="discussion-list">
+            <li class="discussion-item">
+                <h2>Programming language</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla eget libero ac nunc.</p>
+            </li>
+            <li class="discussion-item">
+                <h2>Framework</h2>
+                <p>Proin euismod augue eu vehicula. Sed vel vestibulum eros. Donec eget justo nec leo efficitur iaculis.</p>
+            </li>
+            <li class="discussion-item">
+                <h2>Database</h2>
+                <p>Etiam eu odio id massa ultricies ullamcorper non nec nulla. Nam sodales lacinia metus, at lobortis lorem dapibus et.</p>
+            </li>
+            <!-- Add more discussion items as needed -->
+        </ul>
+    </div>
+    <footer>
+        &copy; 2023 Programmers Group Discussion
+    </footer>
+</body>
+</html>

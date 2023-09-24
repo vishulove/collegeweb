@@ -1,0 +1,1530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Development Institute</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <style>
+        *{
+    margin: 0;
+    padding: 0;
+    font-family:'Lucida Sans';
+    box-sizing: border-box;
+}
+.page{
+    background-color:rgb(29, 23, 44);
+    margin: 0;
+}
+.top-header{
+    position: sticky;
+}
+.main-nav{
+    background-color: rgb(68, 1, 81);
+    height: 120px;
+    width: 100%;
+}
+.submain-nav{
+   display: flex; 
+   position: relative;
+}
+.nav-margin{
+    margin-left: 2px;
+}
+.nav-item{
+    margin:0 40px;
+    margin-top: 24px;
+    padding: 5px;
+    list-style: none;
+    margin-bottom: 24px;
+    text-transform:uppercase ;
+}
+.link{
+    text-decoration: none;
+    color: white;
+
+}
+.link:hover{
+    color:rgb(67, 102, 216) ;
+
+}
+.span-style{
+    color:deeppink;
+}
+.web-banner{
+    font-size: 30px;
+    float: right;
+    padding: 5px;
+    margin-right: 51px;
+    margin-top: -58px;
+}
+.web-menu{
+    display: flex;
+    margin: 0 auto;
+    background-color: whitesmoke;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    text-align: center;
+    justify-content: space-evenly;
+}
+.web-menu-dropdown1{
+    position: absolute;
+    width: 140px;
+    left: -20px;
+    top: 20px;
+    z-index: 10;
+    height: auto;
+}
+.web-dropdown-ul{
+    background: linear-gradient(rgb(47, 42, 42),rgb(3, 3, 50));
+    background-size: cover;
+    box-shadow: 5px 5px 2px gainsboro;
+    border-radius: 2px;
+    overflow-y: scroll;
+    height: 208px;
+}
+.web-dropdown-li{
+    padding: 5px ;
+    width: 100%;
+    list-style: none;
+}
+.web-dropdown-li:hover{
+    background: linear-gradient(150deg,blue,black);
+}
+.web-menu-dropdown1 .web-dropdown-li .web-dropdownli-a:hover{
+    background: linear-gradient(150deg,blue,black);
+}
+.web-dropdownli-a{
+    text-decoration: none;
+    color: rgba(245, 245, 245, 0.622);
+}
+.menu1,.menu2,.menu3,.menu4,.menu5{
+    display: none;
+}
+.middle-nav-item:hover > .menu1{
+    display: block;
+}
+.middle-nav-item:hover > .menu2{
+    display: block;
+}
+.middle-nav-item:hover > .menu3{
+    display: block;
+}
+.middle-nav-item:hover > .menu4{
+    display: block;
+}
+.middle-nav-item:hover > .menu5{
+    display: block;
+}
+.middle-fluid{
+    width: 849px;
+    height: 70px;
+    position: absolute;
+    top: 84px;
+    left: 330px;
+    text-transform: uppercase;
+}
+.middle-nav-item{
+    padding: 8px;
+    margin: 15px 60px 15px 30px;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    position: relative;
+}
+.middle-nav-item:hover{
+    color: rgb(206, 199, 66);
+}
+.sub-container{
+    position: relative;
+    width: 100%;
+    z-index: -1;
+}
+.img_container{
+    height: auto;
+}
+.sub-slider{
+  z-index: -1;
+   width: 100%;
+   margin-bottom: 10px;
+}
+.sub-slider img{
+    width: 100%;
+    height: 750px;
+    border-radius: 2px;
+}
+.span-word{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    text-align: center;
+    top: 350px;
+   
+}
+.span-word h1{
+    font-size: 41px;
+    font-weight: bold;
+    color: rgb(212, 8, 209);
+    text-transform: capitalize;
+    padding: 5px;
+    animation: span-head 15s 0s 1 normal;
+}
+.span-word p{
+    font-weight: 100;
+    margin-right: 144px;
+    margin-left: 150px;
+    padding: 15px;
+    color: bisque;
+    animation: span-para 15s 0s 1 normal;
+}
+
+@keyframes span-head{
+    0%{
+        opacity: 0;
+        top: 215px;
+    }
+    60%{
+        opacity: 100%;
+        top: 215px;
+    }
+    100%{
+        opacity: 100%;
+        top: 215px;
+    }
+    
+}
+@keyframes span-para{
+    0%{
+        opacity: 0;
+        top: 215px;
+    }
+    60%{
+        opacity: 100%;
+        top: 215px;
+    }
+    100%{
+        opacity: 100%;
+        top: 215px;
+    }
+}
+.about-cart{
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    color: navy;
+    padding: 10px;
+    margin: 10px 20px 10px 20px ;
+}
+.cart_container{
+    align-items: center;
+    justify-content: space-evenly;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: 23% 23% 23% 23% ;
+    width: 100%;
+}
+.about-cart{
+    font-weight: bold;
+    text-align: center;
+    display: block;
+
+}
+.cart-1{
+    height: 360px;
+    text-align: center;
+    box-shadow: 5px 10px 10px gray;
+    border-radius: 15px;
+    background-color:aliceblue;
+    margin-top: 14px;
+}
+.cart-img{
+    border-radius: 100%;
+    border-bottom: solid 2px black;
+    border-top: solid 2px black;
+    margin-top: 9px;
+    height: 217px;
+}
+.cart_header{
+    border-top: solid red 2px;
+    text-transform:uppercase;
+}
+.pinch{
+    color: blue;
+}
+.btn-cart{
+    padding: 5px 10px 5px 10px;
+    border-radius: 10px;
+    border: 2px solid peru;
+    border: none;
+    box-shadow: 2px 2px 5px  goldenrod;
+}
+.btn-cart:hover{
+    background-color: peru;
+    color: whitesmoke;
+}
+.porfol-fluid{
+    position: relative;
+    margin-bottom: 95px;
+}
+.head-portfol{
+    text-align: center;
+    color: burlywood;
+    font-weight: bold;
+    margin-top: 70px;
+    font-size: 40px;
+}
+/*.seni-head-port{
+    text-align: center;
+    justify-content: center;
+}*/
+.portfol-double{
+    box-shadow: 2px 2px 2px rgb(8, 142, 224);
+    float: left;
+    padding: 10px;
+    margin:50px 145px 65px 15px ;
+}
+.port1{
+    width: 343px;
+    height: 346px;
+}
+.port2{
+    width: 287px;
+    height: 294px;
+    position: absolute;
+    top: 134px;
+    left: 178px;
+}
+.para-port{
+    margin: 10px 90px 15px 90px;
+    padding: 10px 5px 10px 15px;
+}
+.seni-head-port{
+    margin: 50px 2px 2px 2px;
+    padding: 40px 2px 2px 2px;
+    color: antiquewhite;
+}
+.footer-container{
+    background-color: rgb(4, 4, 98);
+    height: 40px;
+    margin-top: 50px;
+    padding: 5px;
+    color: whitesmoke;
+    text-align: center;
+    justify-content: space-around;
+}
+.last span{
+    margin: 5px ;
+    padding: 5px 10px 5px 10px;
+}
+@media only screen and (min-width:1339px) and (max-width:1500px) {
+    .submain-nav{
+        display:flex ;
+    }
+    .nav-item{
+        margin: 21px -36px;
+        margin-left: 36px;
+    }
+    .nav-margin {
+        margin-left: 40px;
+    }
+    .middle-fluid{
+        position: absolute;
+        top: 97px;
+        left: 18px;;
+        width: 96%;
+        height: 48px;
+    }
+    .middle-nav-item{
+        margin: 10px;
+        padding: 4px;
+    }
+    .cart_container{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .web-menu{
+        border-radius: 10px;
+    }
+    .porfol-fluid {
+        margin-bottom: 50px;
+    }
+    .footer-container{
+        height: 65px;
+    }
+    .cart_container{
+        margin-left: 0;
+    }
+}
+@media only screen and (min-width:1200px) and (max-width:1339px) {
+    .page{
+        width: 100%;
+    }
+    .nav-item{
+        margin: 24px -22px;
+        margin-left: 36px;
+    }
+    .nav-margin {
+        margin-left: 40px;
+    }
+    .middle-fluid{
+        position: absolute;
+        top: 97px;
+        left: 18px;;
+        width: 96%;
+        height: 48px;
+    }
+    .web-menu{
+        border-radius: 10px;
+    }
+    .middle-nav-item{
+        margin: 10px;
+        padding: 4px;
+    }
+    .porfol-fluid {
+        margin-bottom: 0px;
+    }
+    .footer-container{
+        height: 71px;
+        margin-top: 0;
+    }
+    .cart_container{
+        margin-left: 0;
+    }
+}
+@media only screen and (min-width:992px) and (max-width:1200px) {
+    .page{
+        width: 100%;
+    }
+    .nav-item{
+        margin-left: 40px;
+        margin-right: -39px;
+    }
+    .web-banner{
+        font-size: 30px;
+        float: right;
+        padding: 5px;
+        margin-right: 51px;
+        margin-top: -58px;
+    }
+    .middle-fluid{
+        position: absolute;
+        top: 97px;
+        left: 18px;;
+        width: 96%;
+        height: 48px;
+    }
+    .web-menu{
+        border-radius: 10px;
+    }
+    .middle-nav-item{
+        margin: 10px;
+        padding: 4px;
+    }
+    .cart_container{
+        display:grid;
+        grid-template-columns:260px 260px 260px  ;
+        margin-left: -19px;
+    }
+    .cart-1{
+        margin-top: 14px;
+        width: 300px;
+        height: 370px;
+    }
+    .porfol-fluid {
+        margin-bottom: 0px;
+    }
+    .footer-container{
+        margin-top: 0;
+        height: 71px;
+    }
+}
+@media only screen and (min-width:772px) and (max-width:992px) {
+    .page{
+        width: 100%;
+    }
+    .submain-nav{
+        display: flex;
+    }
+    .nav-item{
+        margin-left: -35px;
+        font-size: 14px;
+        
+    }
+    .nav-margin{
+        margin-left: 10px;
+    }
+    .web-banner{
+        font-size: 30px;
+        float: right;
+        padding: 5px;
+        margin-right: 51px;
+        margin-top: -65px;
+    }
+    .middle-fluid{
+        position: absolute;
+        top: 97px;
+        left: 18px;;
+        width: 96%;
+        height: 48px;
+    }
+    .web-menu{
+        border-radius: 10px;
+    }
+    .middle-nav-item{
+        margin: 10px;
+        padding: 4px;
+    }
+    .cart_container{
+        display:grid;
+        grid-template-columns: 231px 231px 231px;
+        margin-left: 0;
+    }
+    .cart-1{
+        margin-top: 14px;
+        width: 231px;
+        height: 370px;
+    }
+    .porfol-fluid{
+        margin-bottom: 0;
+    }
+    .footer-container{
+        height: 66px;
+        margin-top: 0;
+    }
+}
+@media only screen and (min-width:576px) and (max-width:772px) {
+    .page{
+        width: 100%;
+    }
+    .nav-item{
+        margin-top: 34px;
+        margin-left: -36px;
+        font-size: 10px;
+    }
+    .nav-margin{
+        margin-left: 17px;
+    }
+    .nav-item_bottom {
+        margin: 0 10px;
+    }
+    .web-banner{
+        font-size: 30px;
+        float: right;
+        padding: 5px;
+        margin-right: 44px;
+        margin-top: -67px;
+    }
+    .web-menu-dropdown1{
+        position: absolute;
+      /*  width: 100px;*/
+        left: -20px;
+        top: 20px;
+        z-index: 10;
+        height: auto;
+    }
+.web-dropdown-ul{
+    background: linear-gradient(rgb(47, 42, 42),rgb(3, 3, 50));
+    background-size: cover;
+    box-shadow: 5px 5px 2px gainsboro;
+    border-radius: 2px;
+    overflow-y: scroll;
+    height: 168px;
+}
+.menu-5-dropdown{
+    left: -47px;
+}
+    .middle-fluid{
+        position: absolute;
+        top: 84px;
+        left: 15px;
+        width: 96%;
+        height: 48px;
+    }
+    .web-menu {
+        border-radius: 10px;
+    }
+    .middle-nav-item{
+        margin: 10px;
+        padding: 4px;
+    }
+    .cart_container{
+        display:grid;
+        grid-template-columns: 270px 270px ;
+        margin-left: 0;
+    }
+    .cart-1{
+        margin-top: 14px;
+        width: 270px;
+        height: 370px;
+    }
+    .portfol-double {
+        margin: 31px 27px 37px 18px;
+        float: none;
+    }
+    .img-portfol_container{
+        text-align: center;
+        justify-content: center;
+    }
+    .para-port {
+        margin: 8px 15px 15px 15px;
+    }
+    .seni-head-port{
+        text-align: center;
+        justify-content: center;
+    }
+    .port1 {
+        position: relative;
+        top: 24px;
+        left: -44px;
+    }
+    .port2 {
+        position: absolute;
+        top: 178px;
+        left: 250px;
+    }
+    .porfol-fluid{
+        margin-bottom: 0;
+    }
+    .footer-container{
+        height: 81px;
+        margin-top: 0;
+    }
+}
+/*@media only screen and (min-width:564px) and (max-width:625px) {
+    .page{
+        width: 100%;
+    }
+    .nav-item{
+        margin-top: 34px;
+        margin-left: -36px;
+        font-size: 10px;
+    }
+    .nav-margin{
+        margin-left: 17px;
+    }
+    .nav-item_bottom {
+        margin: 0 10px;
+    }
+    .web-menu {
+        border-radius: 10px;
+    }
+   .web-banner{ 
+    position: absolute;
+    top: 14px;
+    left: 111px;
+    margin-left: 300px ;
+    padding-right: 5px;
+    }
+    .middle-fluid{
+        position: absolute;
+        top: 84px;
+        left: 15px;
+        width: 96%;
+        height: 48px;
+    }
+    .middle-nav-item{
+        margin: 10px;
+        padding: 4px;
+    }
+    .cart_container{
+        display:grid;
+        grid-template-columns: 260px 260px ;
+        margin-left: -2px;
+    }
+    .cart-1{
+        margin-top: 14px;
+        width: 260px;
+        height: 372px;
+    }
+    .portfol-double {
+        margin: 31px 27px 37px 18px;
+        float: none;
+    }
+    .img-portfol_container{
+        text-align: center;
+        justify-content: center;
+    }
+    .para-port {
+        margin: 8px 15px 15px 15px;
+    }
+    .seni-head-port{
+        text-align: center;
+        justify-content: center;
+    }
+    .port1 {
+        position: relative;
+        top: 24px;
+        left: -44px;
+    }
+    .port2 {
+        position: absolute;
+        top: 178px;
+        left: 180px;
+    }
+    .porfol-fluid{
+        margin-bottom: 0;
+    }
+    .footer-container{
+        height: 84px;
+        margin-top: 0;
+    }
+}*/
+@media only screen and (min-width:447px) and (max-width:576px) {
+    .page{
+        width: 100%;
+    }
+    .submain-nav {
+        top: 27px;
+    }
+    .main-nav{
+        height: 84px;
+    }
+    .nav-item{
+        margin-top: 0;
+        font-size: 9px;
+        margin-left: -44px;
+    }
+    .nav-margin{
+        margin-left: 6px;
+    }
+    .nav-item_bottom {
+        margin: 0 10px;
+    }
+    .web-banner {
+        font-size: 23px;
+        float: right;
+        padding: 5px;
+        margin-right: 15px;
+        margin-top: -34px;
+    }
+    .web-menu-dropdown1{
+        position: absolute;
+        width: 76px;
+        left: -20px;
+        top: 20px;
+        z-index: 10;
+        height: auto;
+    }
+.web-dropdown-ul{
+    background: linear-gradient(rgb(47, 42, 42),rgb(3, 3, 50));
+    background-size: cover;
+    box-shadow: 5px 5px 2px gainsboro;
+    border-radius: 2px;
+    overflow-y: scroll;
+    height: 123px;
+}
+.menu-5-dropdown{
+    left: -30px;
+}
+    .middle-fluid{
+        position: absolute;
+        top: 69px;
+        left: 16px;
+        width: 92%;
+        height: 35px;
+    }
+    .middle-nav-item{
+        margin: 4px;
+        padding: 11px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        font-size: 9px;
+    }
+    .web-menu{
+        border-radius: 10px;
+    }
+    .cart_container{
+        display:grid;
+        grid-template-columns: 200px 200px;
+        margin-left: 0px;
+    }
+    .cart-1{
+        margin-top: 14px;
+        width: 213px;
+        height: 370px;
+    }
+    .cart-img{
+        height: 179px;
+        width: 180px;
+    }
+    .port1 {
+        width: 269px;
+        height: 255px;
+        position: relative;
+        top: 24px;
+        left: -44px;
+    }
+    .port2{
+        width: 221px;
+        height: 225px;
+        position: absolute;
+        top: 130px;
+        left: 153px;
+    }
+    .span-word p{
+        margin-right: 2px;
+        margin-left: 3px;
+    }
+    .span-word h1 {
+        font-size: 22px;
+    }
+    .head-portfol {
+        font-size: 20px;
+    }
+    .seni-head-port{
+        text-align: center;
+        justify-content: center;
+        padding:28px 2px 2px 2px;
+    }
+    .portfol-double {
+        margin: 31px 27px 37px 18px;
+        float: none;
+    }
+    .img-portfol_container{
+        text-align: center;
+        justify-content: center;
+    }
+    .para-port {
+        margin: 8px 15px 15px 15px;
+    }
+    .porfol-fluid{
+        margin-bottom: 0;
+    }
+    .footer-container{
+        margin-top: 0;
+        height: 84px;
+    }
+}
+/*@media only screen and (min-width:447px) and (max-width:536px) {
+    .page{
+        width: 100%;
+    }
+    .submain-nav {
+        top: 26px;
+    }
+    .main-nav{
+        height: 84px;
+    }
+    .nav-item{
+        margin-top: 0;
+        font-size: 9px;
+        margin-left: -44px;
+    }
+    .nav-margin{
+        margin-left: 6px;
+    }
+    .nav-item_bottom {
+        margin: 0 10px;
+    }
+   .web-banner{ 
+    position: absolute;
+    top: -6px;
+    left: 9px;
+    margin-left: 300px;
+    padding-right: 5px;
+    font-size: 22px;
+    }
+    .middle-fluid{
+        position: absolute;
+        top: 68px;
+        left: 16px;
+        width: 92%;
+        height: 35px;
+    }
+    .middle-nav-item{
+        margin: 4px;
+        padding: 11px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        font-size: 9px;
+    }
+    .web-menu{
+        border-radius: 10px;
+    }
+    .cart_container{
+        display:grid;
+        grid-template-columns: 205px 205px ;
+        margin-left: 0px;
+    }
+    .cart-1{
+        margin-top: 14px;
+        width: 205px;
+        height: 372px;
+    }
+    .cart-img{
+        width: 174px;
+    }
+    .span-word p{
+        margin-right: 2px;
+        margin-left: 3px;
+    }
+    .span-word h1 {
+        font-size: 22px;
+    }
+    .head-portfol {
+        font-size: 20px;
+    }
+    .seni-head-port{
+        text-align: center;
+        justify-content: center;
+        padding: 0px 2px 2px 2px;
+    }
+    .portfol-double {
+        margin: 31px 27px 37px 18px;
+        float: none;
+    }
+    .img-portfol_container{
+        text-align: center;
+        justify-content: center;
+    }
+    .para-port {
+        margin: 8px 15px 15px 15px;
+    }
+    .port1 {
+        width: 197px;
+        height: 160px;
+    }
+    .port2 {
+        width: 147px;
+        height: 123px;
+        position: absolute;
+        top: 93px;
+        left: 171px;
+    }
+    .porfol-fluid{
+        margin-bottom: 0;
+    }.portfol-double {
+        margin: 31px 27px 37px 18px;
+        float: none;
+    }
+    .img-portfol_container{
+        text-align: center;
+        justify-content: center;
+    }
+    .para-port {
+        margin: 8px 15px 15px 15px;
+    }
+    .port1 {
+        width: 197px;
+        height: 160px;
+    }
+    .port2 {
+        width: 147px;
+        height: 123px;
+        position: absolute;
+        top: 93px;
+        left: 171px;
+    }
+    .porfol-fluid{
+        margin-bottom: 0;
+    }
+    .footer-container{
+        margin-top: 0;
+        height: 72px;
+        font-size: 13px;
+    }
+}*/
+@media only screen and (min-width:300px) and (max-width:447px) {
+    .page{
+        width: 100%;
+    }
+    .main-nav{
+        height: 80px;
+    }
+    .submain-nav {
+        top: 21px;
+    }
+    .nav-item{
+        margin-top: 0;
+        margin-left: -44px;
+        font-size: 7px;
+    }
+    .nav-margin{
+        margin-left: 6px;
+    }
+    .nav-item_bottom {
+        margin: 0 10px;
+    }
+    .web-banner {
+        font-size: 13px;
+        float: right;
+        padding: 5px;
+        margin-right: 2px;
+        margin-top: -31px;
+    }
+    .web-menu-dropdown1{
+        position: absolute;
+        width: 76px;
+        left: -20px;
+        top: 20px;
+        z-index: 10;
+        height: auto;
+    }
+.web-dropdown-ul{
+    background: linear-gradient(rgb(47, 42, 42),rgb(3, 3, 50));
+    background-size: cover;
+    box-shadow: 5px 5px 2px gainsboro;
+    border-radius: 2px;
+    overflow-y: scroll;
+    height: 123px;
+}
+.menu-5-dropdown{
+    left: -30px;
+}
+    .middle-fluid{
+        position: absolute;
+        top: 63px;
+        left: 16px;
+        width: 92%;
+        height: 35px;
+    }
+    .middle-nav-item{
+        margin: 4px;
+        padding: 11px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        font-size: 9px;
+    }
+    .web-menu{
+        border-radius: 10px;
+    }
+    .sub-slider img{
+        border-radius: 4px;
+    }
+    .cart_container{
+        display:grid;
+        grid-template-columns: 365px  ;
+        margin-left: 0px;
+    }
+    .cart-1{
+        margin-top: 14px;
+        width: 278px;
+        height: 352px;
+        margin-left: 43px;
+        margin-right: 10px;
+    }
+    .cart-img{
+        width: 174px;
+    }
+    .span-word p{
+        margin-right: 2px;
+        margin-left: 3px;
+    }
+    .span-word h1 {
+        font-size: 22px;
+    }
+    .head-portfol {
+        font-size: 20px;
+    }
+    .seni-head-port{
+        text-align: center;
+        justify-content: center;
+        padding: 0px 2px 2px 2px;
+    }
+    .portfol-double {
+        margin: 31px 55px 37px 18px;
+        float: none;
+    }
+    .img-portfol_container{
+        text-align: center;
+        justify-content: center;
+    }
+    .para-port {
+        margin: 8px 15px 15px 15px;
+    }
+    .port1 {
+        width: 197px;
+        height: 160px;
+    }
+    .port2 {
+        width: 147px;
+        height: 123px;
+        position: absolute;
+        top: 93px;
+        left: 106px;
+    }
+    .porfol-fluid{
+        margin-bottom: 0;
+    }
+    .footer-container{
+        margin-top: 0;
+        height: 60px;
+        font-size: 10px;
+    }
+    .last span {
+        margin: 1px;
+        padding: 5px 2px 5px 4px;
+    }
+}
+@media only screen and (min-width:280px) and (max-width:300px) {
+    .page{
+        width: 100%;
+    }
+    .main-nav {
+        height: 75px;
+    }
+    .submain-nav {
+        top: 20px;
+    }
+    .nav-item{
+        margin-top: 0;
+        font-size: 7px;
+        margin-left: -44px;
+        margin-right: 37px;
+    }
+    .nav-margin{
+        margin-left: 2px;
+    }
+    .nav-item_bottom {
+        margin: 0 10px;
+    }
+    .web-banner {
+        font-size: 11px;
+        float: right;
+        padding: 5px;
+        margin-right: 2px;
+        margin-top: -35px;
+    }
+    .web-menu-dropdown1{
+        position: absolute;
+        width: 76px;
+        left: -20px;
+        top: 20px;
+        z-index: 10;
+        height: auto;
+    }
+.web-dropdown-ul{
+    background: linear-gradient(rgb(47, 42, 42),rgb(3, 3, 50));
+    background-size: cover;
+    box-shadow: 5px 5px 2px gainsboro;
+    border-radius: 2px;
+    overflow-y: scroll;
+    height: 123px;
+}
+.menu-5-dropdown{
+    left: -30px;
+}
+    .middle-fluid{
+        position: absolute;
+        top: 62px;
+        left: 16px;
+        width: 92%;
+        height: 35px;
+    }
+    .middle-nav-item{
+        margin: 4px;
+        padding: 11px;
+        padding-right: 2px;
+        padding-bottom: 2px;
+        padding-left: 2px;
+        font-size: 9px;
+    }
+    .web-menu{
+        border-radius: 10px;
+    }
+    .sub-slider img{
+        border-radius: 4px;
+    }
+    .cart_container{
+        display:grid;
+        grid-template-columns: 365px  ;
+        margin-left: 0px;
+    }
+    .cart-1{
+        margin-top: 14px;
+        width: 278px;
+        height: 352px;
+        margin-left: 43px;
+        margin-right: 10px;
+    }
+    .cart-img{
+        width: 174px;
+    }
+    .span-word p{
+        margin-right: 2px;
+        margin-left: 3px;
+    }
+    .span-word h1 {
+        font-size: 22px;
+    }
+    .head-portfol {
+        font-size: 20px;
+    }
+    .seni-head-port{
+        text-align: center;
+        justify-content: center;
+        padding: 0px 2px 2px 2px;
+    }
+    .portfol-double {
+        margin: 31px 55px 37px 18px;
+        float: none;
+    }
+    .img-portfol_container{
+        text-align: center;
+        justify-content: center;
+    }
+    .para-port {
+        margin: 8px 15px 15px 15px;
+    }
+    .port1 {
+        width: 197px;
+        height: 160px;
+    }
+    .port2 {
+        width: 147px;
+        height: 123px;
+        position: absolute;
+        top: 93px;
+        left: 106px;
+    }
+    .porfol-fluid{
+        margin-bottom: 0;
+    }
+    .footer-container{
+        margin-top: 0;
+        height: 60px;
+        font-size: 10px;
+    }
+    .last span {
+        margin: 1px;
+        padding: 5px 2px 5px 4px;
+    }
+}
+    </style>
+</head>
+<body class="page">
+    <header class="top-header">
+        <nav class="main-nav  ">
+            <ul class="submain-nav top-nav">
+                <li class="nav-item nav-margin nav-link">
+                    <a href="#" class="link">
+                    <span class="nested-nav-item span-row">contact</span>
+                    <br>
+                    <span class="nested-nav-item  span-row2">+918239289203</span>
+                </a >
+                </li>
+                <li class="nav-item nav-link">
+                    <a href="#" class="link">
+                    <span class="nested-nav-item span-row3">email</span>
+                    <br>
+                    <span class="nested-nav-item  span-row4">rakul123gmail.com</span>
+                </a>
+                </li>
+                <li class="nav-item nav-link">
+                    <a href="#" class="link">
+                    <span class="nested-nav-item span-row5">experiense </span>
+                    <br>
+                    <span class="nested-nav-item  span-row5">20year</span>
+                </a>
+                </li>
+                <li class="nav-item nav-link">
+                    <a href="#" class="link">
+                    <span class="nested-nav-item span-row7">center</span>
+                    <br>
+                    <span class="nested-nav-item  span-row8">rani-bage delhi</span>
+                </a>
+                </li>
+            </ul>
+            <div class="nav-item_bottom web-banner">
+                    digi<span class="span-style">wizr</span>
+                </div>
+        </nav>
+        <nav class="middle container-middle">
+            <nav class="middle-fluid">
+                <ul class="web-menu menu_bar">
+                    <li class="middle-nav-item menubar-item1" >
+                            facilities
+                        <div class="menu1">
+                        <div class="web-menu-dropdown1">
+                            <ul class="web-dropdown-ul">
+                                <li class="web-dropdown-li"><a href="online class.html" class="web-dropdownli-a">online class</a></li>
+                                <li class="web-dropdown-li"><a href="weekend test.html" class="web-dropdownli-a">weekend test</a></li>
+                                <li class="web-dropdown-li"><a href="exploring website.html" class="web-dropdownli-a">institute</a></li>
+                                <li class="web-dropdown-li"><a href="meeting.html" class="web-dropdownli-a">meeting with sr. developer</a></li>
+                                <li class="web-dropdown-li"><a href="programming problems releted.html" class="web-dropdownli-a">group discussion</a></li>
+                            </ul>
+                        </div>
+                       </div>
+                        </div>
+                    </li>
+                    <li class="middle-nav-item menubar-item2">
+                            Fee
+                        <div class="menu2">
+                            <div class="web-menu-dropdown1">
+                                <ul class="web-dropdown-ul">
+                                    <li class="web-dropdown-li"><a href="languages.html" class="web-dropdownli-a">programming lanuage</a></li>
+                                    <li class="web-dropdown-li"><a href="framework.html" class="web-dropdownli-a">programming framework</a></li>
+                                    <li class="web-dropdown-li"><a href="database.html" class="web-dropdownli-a">programming Database</a></li>
+                                    <li class="web-dropdown-li"><a href="api.html" class="web-dropdownli-a">programming API 'S</a></li>
+                                    <li class="web-dropdown-li"><a href="frontend.html" class="web-dropdownli-a">Frontend development</a></li>
+                                    <li class="web-dropdown-li"><a href="backend.html" class="web-dropdownli-a">backend development</a></li>
+                                    <li class="web-dropdown-li"><a href="fullstack.html" class="web-dropdownli-a">Fulstack development</a></li>
+                                </ul>
+                            </div>
+                           </div>
+                            </div>
+                    </li>
+                    <li class="middle-nav-item menubar-item3">
+                        
+                            courses
+                       
+                        <div class="menu3">
+                            <div class="web-menu-dropdown1">
+                                <ul class="web-dropdown-ul">
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">HTML</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">CSS</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">PHP</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">JAVA</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">PYTHON</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">C++</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">C#</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">NODE.js</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">RUBY</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">.NET</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">ANGULAR.js</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">GIT</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">GITHUV</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">Djang</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">LARAVEL</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">MONGO DB</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">API</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">REST</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">REACT.js</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">vue.js</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">Json</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">SOAP</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">RPC</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">ORACLE</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">MYSQL</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">SPRING BOOT</a></li>
+                                    <li class="web-dropdown-li"><a href="" class="web-dropdownli-a">TOOLS</a></li>
+                                </ul>
+                            </div>
+                           </div>
+                            </div>
+                    </li>
+                    <li class="middle-nav-item menubar-item4">
+                     
+                            admission 
+                    
+                        <div class="menu4">
+                            <div class="web-menu-dropdown1 ">
+                                <ul class="web-dropdown-ul dropdown1-1">
+                                    <li class="web-dropdown-li"><a href="admission.html" class="web-dropdownli-a">Form</a></li>
+                                    
+                                </ul>
+                            </div>
+                           </div>
+                            </div>
+                    </li>
+                    <li class="middle-nav-item menubar-item5">
+                        
+                            blogs
+                    
+                        <div class="menu5">
+                            <div class="web-menu-dropdown1 menu-5-dropdown">
+                                <ul class="web-dropdown-ul">
+                                    <li class="web-dropdown-li"><a href="devloper1.html" class="web-dropdownli-a">Mr. naresh developer</a></li>
+                                    <li class="web-dropdown-li"><a href="devloper1.html" class="web-dropdownli-a">Mr. raju developer</a></li>
+                                    <li class="web-dropdown-li"><a href="devloper1.html" class="web-dropdownli-a">Mr. vishal developer</a></li>
+                                    <li class="web-dropdown-li"><a href="devloper1.html" class="web-dropdownli-a">Mr. mohit developer</a></li>
+                                    <li class="web-dropdown-li"><a href="devloper1.html" class="web-dropdownli-a">Mr. aman developer</a></li>
+                                </ul>
+                            </div>
+                           </div>
+                            </div>
+                    </li>
+                </ul>
+            </nav>
+        </nav>
+    </header>
+    <section class="img_container img-slider">
+            <div class="sub-slider first-img">
+                <img src="./web-design.jpg" alt="">
+            </div>
+            <div class=" span-word">
+                <h1 class="span-head">opportunity in web development</h1>
+                <p class="span-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, doloremque incidunt maiores eos tempore possimus rem.
+                    Ducimus natus obcaecati harum excepturi optio iusto recusandae alias impedit deleniti ipsum. Nobis, velit.</p>
+            </div>
+    </section>
+    <section class=" cart">
+        <!--<h1 class="about-cart">About us</h1>-->
+        <div class="cart_container">
+        <div class="cart-1">
+            <img src="./download (3).jfif" alt="" class="cart-img">
+           
+            <h2 class="cart_header">html</h2>
+            <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+            </p>
+                 <a href="#" class="cart-link">
+                    <button class="btn-cart">click here</button>
+                 </a>
+        </div>
+        <div class="cart-1">
+            <img src="./download (3).jfif" alt="" class="cart-img">
+           
+            <h2 class="cart_header">java</h2>
+            <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+            </p>
+                 <a href="#" class="cart-link">
+                    <button class="btn-cart">click here</button>
+                 </a>
+        </div>
+        <div class="cart-1">
+            <img src="./download (3).jfif" alt="" class="cart-img">
+           
+            <h2 class="cart_header">css</h2>
+            <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+            </p>
+                 <a href="#" class="cart-link">
+                    <button class="btn-cart">click here</button>
+                 </a>
+        </div>
+        <div class="cart-1">
+            <img src="./download (3).jfif" alt="" class="cart-img">
+           
+            <h2 class="cart_header">php</h2>
+            <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+            </p>
+                 <a href="#" class="cart-link">
+                    <button class="btn-cart">click here</button>
+                 </a>
+        </div>
+        <div class="cart-1">
+            <img src="./download (3).jfif" alt="" class="cart-img">
+           
+            <h2 class="cart_header">PYTHON</h2>
+            <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+            </p>
+                 <a href="#" class="cart-link">
+                    <button class="btn-cart">click here</button>
+                 </a>
+        </div>
+        
+        <div class="cart-1">
+            <img src="./download (3).jfif" alt="" class="cart-img">
+           
+            <h2 class="cart_header">javascript</h2>
+            <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+            </p>
+                 <a href="#" class="cart-link">
+                    <button class="btn-cart">click here</button>
+                 </a>
+        </div>
+        <div class="cart-1">
+            <img src="./download (3).jfif" alt="" class="cart-img">
+           
+            <h2 class="cart_header">advance java</h2>
+            <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+            </p>
+                 <a href="#" class="cart-link">
+                    <button class="btn-cart">click here</button>
+                 </a>
+        </div>
+        <div class="cart-1">
+            <img src="./download (3).jfif" alt="" class="cart-img">
+           
+            <h2 class="cart_header">C++</h2>
+            <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+            </p>
+                 <a href="#" class="cart-link">
+                    <button class="btn-cart">click here</button>
+                 </a>
+        </div>
+          <div class="cart-1">
+              <img src="./download (3).jfif" alt="" class="cart-img">
+           
+              <h2 class="cart_header">c#</h2>
+              <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+              </p>
+                   <a href="#" class="cart-link">
+                    <button class="btn-cart">click here</button>
+                   </a>
+          </div>
+        
+          <div class="cart-1">
+              <img src="./download (3).jfif" alt="" class="cart-img">
+           
+              <h2 class="cart_header">c</h2>
+              <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+              </p>
+                   <a href="#" class="cart-link">
+                      <button class="btn-cart">click here</button>
+                   </a>
+          </div>
+          <div class="cart-1">
+              <img src="./download (3).jfif" alt="" class="cart-img">
+           
+              <h2 class="cart_header">mysql</h2>
+              <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+              </p>
+                   <a href="#" class="cart-link">
+                      <button class="btn-cart">click here</button>
+                   </a>
+          </div>
+          <div class="cart-1">
+              <img src="./download (3).jfif" alt="" class="cart-img">
+           
+              <h2 class="cart_header">advance php</h2>
+              <p class="cart_para">
+                Html difine us <pinch class="pinch">hyper text markup lanuage</pinch>,Inside html is every element difine <pinch class="pinch">tags and data</pinch>.
+              </p>
+                   <a href="#" class="cart-link">
+                      <button class="btn-cart">click here</button>
+                   </a>
+          </div>
+    </div>
+    </section>
+    <section class="porfol-fluid">
+        <h1 class="head-portfol">Aknowledgement</h1>
+        <div class="img-portfol_container">
+            <img src="./tree img.jpg" alt="" class="portfol-double port1">
+           <img src="./tree img.jfif" alt="" class="portfol-double port2">
+        </div>
+        <div class="seni-head-port">
+        <h3 class="head-portfol3">About Image</h3>
+        <p class="para-port">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod quos atque voluptate nihil corrupti nulla, repudiandae similique cum quae eos odio, accusantium omnis illo sit reprehenderit est, aliquam soluta quia.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis quo, deserunt esse illum reprehenderit repellat illo quia assumenda voluptate quod, veritatis aperiam nihil dolore recusandae consectetur est. Nihil, labore illum?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. In magnam, rerum possimus nostrum tempora nulla aut temporibus excepturi. Tenetur beatae iste, itaque adipisci aliquid ullam quaerat? Sunt a quas et.
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit, ducimus ratione? Ratione unde omnis incidunt dolorem, repellendus repudiandae voluptas maiores, illum commodi iure officiis tenetur. Corporis maiores cum suscipit quibusdam.
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam officiis quam, voluptate odio libero inventore asperiores, natus voluptatibus at ipsum nesciunt ea blanditiis accusamus tenetur nemo tempore assumenda totam recusandae?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod officia nobis architecto quos ut voluptatem quis vero ab maxime omnis? Recusandae, in excepturi! Illum laborum debitis aliquam illo labore tempore?
+        </p></div>
+    </section>
+    <footer class="footer-container last">
+      <span>  This website has been claim own patent on copyright&copy;</span> 
+      <span>registered trademark &reg;</span>
+      <span>Email</span>
+      <span>contact</span>
+      <span>HTML</span>
+      <span>CSS</span>
+      <span>JAVA</span>
+      <span>PYTHON</span>
+      <span>MYSQL</span>
+      <span>C++</span>
+      <span>C#</span>
+    </footer>
+</body>
+<script>
+</script>
+</html>
